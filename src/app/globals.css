@@ -5,14 +5,26 @@
 html{
   height: 100vh;
   overflow: hidden;
-  /* background: radial-gradient(ellipse at bottom, #1b2735 0%,  #090a0f 100%); */
-  background: linear-gradient(to top, #2e2e5b 0%,  #090a0f 90%);
+  background: radial-gradient(ellipse at bottom, #1b1e35 0%,#090a0f 60%);
+  /* background: linear-gradient(to top, #242447 0%,  #090a0f 90%); */
   /* background: radial-gradient(ellipse at bottom, #2e2e5b 0%,  #090a0f 100%); */
+}
+.navbar {
+  background-color: #090a0f;
+}
+
+.button-bg {
+  background-color:#291b35;
+}
+
+.star-bg {
+  filter: blur(1px)
 }
 
 .height {
   height: 100vh; /* Set the desired height */
   overflow: hidden;
+  
 }
 
 .star-field {
