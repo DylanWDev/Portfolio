@@ -7,7 +7,7 @@ export default function Home() {
   const [stars, setStars] = useState([]);
 
   const generateStars = () => {
-    const numStars = 100; // Adjust the number of stars as needed
+    const numStars = 150; // Adjust the number of stars as needed
     const starsArray = [];
     
     const heightDiv = document.querySelector('.height');
