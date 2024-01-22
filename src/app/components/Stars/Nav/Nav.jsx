@@ -9,7 +9,7 @@ const Nav = () => {
           <li className="font-semibold text-gray-700">Blog</li>
           <li className="font-semibold text-gray-700">Projects</li>
           <button className="button-bg hover:bg-gray-100 text-white font-semibold py-2 px-4 border border-gray-400  shadow">
-          Button
+          Hire Me
         </button>
         </ul>
       </div>

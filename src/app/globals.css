@@ -5,8 +5,8 @@
 html{
   height: 100vh;
   overflow: hidden;
-  background: radial-gradient(ellipse at bottom, #1b1e35 0%,#090a0f 60%);
-  /* background: linear-gradient(to top, #242447 0%,  #090a0f 90%); */
+  /* background: radial-gradient(ellipse at bottom, #271e3f 0%,  #090a0f 60%); */
+  background: linear-gradient(to top, #24245e 0%,  #090a0f 90%);
   /* background: radial-gradient(ellipse at bottom, #2e2e5b 0%,  #090a0f 100%); */
 }
 .navbar {
@@ -14,11 +14,11 @@ html{
 }
 
 .button-bg {
-  background-color:#291b35;
+  background-color:#f647f692;
 }
 
 .star-bg {
-  filter: blur(1px)
+  filter: blur(0.5px)
 }
 
 .height {
