@@ -9,13 +9,6 @@ html{
   background: linear-gradient(to top, #0c0c3c 0%,  #090a0f 90%);
   /* background: radial-gradient(ellipse at bottom, #1B2735 0%, #191F24 100%); */
 }
-.navbar {
-  background-color: #090a0f;
-}
-
-.button-bg {
-  background-color:#f647f692;
-}
 
 .height {
   height: 100vh; /* Set the desired height */
