@@ -21,6 +21,10 @@ html{
   filter: blur(0.5px)
 }
 
+.icons {
+  
+}
+
 .height {
   height: 100vh; /* Set the desired height */
   overflow: hidden;
