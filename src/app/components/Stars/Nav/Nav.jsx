@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 const Nav = () => {
   return (
@@ -9,7 +10,7 @@ const Nav = () => {
           <li className="font-semibold text-white">about</li>
           <li className="font-semibold text-white">Blog</li>
           <li className="font-semibold text-white">Projects</li>
-          <button className="flex bg-transparent rounded-lg hover:bg-gray-100 text-white font-semibold py-2 px-4 border border-gray-400  shadow">
+          <button className="hireme flex  rounded-lg hover:bg-gray-100 text-white font-semibold py-2 px-4 border border-gray-400  shadow">
             Hire Me
             <svg
               xmlns="http://www.w3.org/2000/svg"
