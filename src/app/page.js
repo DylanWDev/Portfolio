@@ -7,9 +7,7 @@ export default function Home() {
       <div className="star-bg absolute star-container ">
         <Stars />
       </div>
-      <div className="absolute top-0 w-full">
-        <Nav />
-      </div>
+      
       <div className="font-semibold text-white flex flex-col items-center justify-center h-screen text-center relative z-10">
         <h1 className="text-6xl pb-10">
           I'm Dylan.

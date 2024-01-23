@@ -5,9 +5,7 @@
 html{
   height: 100vh;
   overflow: hidden;
-  /* background: radial-gradient(ellipse at bottom, #271e3f 0%,  #090a0f 60%); */
-  background: linear-gradient(to top, #0c0c3c 0%,  #090a0f 90%);
-  /* background: radial-gradient(ellipse at bottom, #1B2735 0%, #191F24 100%); */
+  background-image: radial-gradient(circle, #2f0053, #22084b, #170c41, #100c37, #0c0a2c, #0a0926, #080720, #05061a, #060718, #060815, #080912, #090a0f);
 }
 
 .height {

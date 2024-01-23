@@ -8,13 +8,13 @@ const Nav = () => {
 
   return (
     <Popover className="container text-white mx-auto flex items-center border-b-2 px-6 py-2 h-24">
-      <h1 className="cursor-pointer font-bold">Portfolio</h1>
+      <Link className="cursor-pointer font-bold" href="/">Portfolio</Link>
       <div className="grow">
         <div className="hidden cursor-pointer sm:flex items-center justify-end gap-4">
         <Link className="cursor-pointer" href="about">About</Link>
         <Link href="blog">Blog</Link>
         <Link href="projects">Projects</Link>
-        <button className="flex  rounded-lg hover:bg-gray-100 text-white font-semibold py-2 px-4 border border-gray-400  shadow">
+        <button className="flex  rounded-lg hover:bg-pink-500 text-white font-semibold py-2 px-4 border border-gray-400  shadow">
             Hire Me
             <svg
               xmlns="http://www.w3.org/2000/svg"
