@@ -11,11 +11,11 @@ export default function Home() {
         <Nav />
       </div>
       <div className="pointer-events-none font-semibold text-white flex flex-col items-center justify-center h-screen text-center relative z-10">
-        <h1 className="text-6xl pb-10">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl lg:pb-10 pb-7">
           Hi, I'm Dylan.
           <br />
         </h1>
-        <span className="text-2xl pb-5">a full-stack web developer.</span>
+        <span className="text-md lg:text-2xl pb-5">a full-stack web developer.</span>
       </div>
     </div>
   );
