@@ -1,38 +1,82 @@
+"use client"
+import React from "react";
 import Nav from "../components/Nav/Nav";
 import Stars from "../components/Stars/Stars";
 import Card from "../components/Card/Card";
 
 export default function Projects() {
+  const scrollToCardsSection = () => {
+    const cardsSection = document.getElementById("cards-section");
+
+    if (cardsSection) {
+      cardsSection.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
+  };
+
   return (
-    <div className="relative">
-      <div className="star-bg absolute star-container">
-        <Stars />
-      </div>
-      <div className="absolute top-0 w-full sticky">
-        <Nav />
-      </div>
-      <div className="grid justify-items-center items-center h-screen">
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5">
-          <Card
-            imageUrl="/images/IMG_9082.JPG"
-            title="The Coldest Sunset"
-            description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."
-            buttonText="Click Me!"
-          />
-          <Card
-            imageUrl="/images/IMG_9082.JPG"
-            title="The Coldest Sunset"
-            description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."
-            buttonText="Click Me!"
-          />
-          <Card
-            imageUrl="/images/IMG_9082.JPG"
-            title="The Coldest Sunset"
-            description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."
-            buttonText="Click Me!"
-          />
+    <div>
+      <section className="min-h-screen relative">
+        <div className="star-bg absolute star-container">
+          <Stars />
         </div>
-      </div>
+        <div className="absolute top-0 w-full sticky">
+          <Nav />
+        </div>
+        <div className="flex flex-col items-center justify-center h-screen relative z-10">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl lg:pb-10 pb-7 text-white">
+            View My Work
+            <br />
+          </h1>
+          <span
+            className="text-md lg:text-2xl p-2 border rounded-full animate-bounce cursor-pointer"
+            onClick={scrollToCardsSection}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="w-6 h-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M19.5 13.5 12 21m0 0-7.5-7.5M12 21V3"
+              />
+            </svg>
+          </span>
+        </div>
+      </section>
+      <section
+        id="cards-section"
+        className="min-h-screen overflow-hidden bg-white"
+      >
+        <div className="grid justify-items-center h-full">
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5">
+            <Card
+              imageUrl="/images/IMG_9082.JPG"
+              title="The Coldest Sunset"
+              description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."
+              buttonText="Click Me!"
+            />
+            <Card
+              imageUrl="/images/IMG_9082.JPG"
+              title="The Coldest Sunset"
+              description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."
+              buttonText="Click Me!"
+            />
+            <Card
+              imageUrl="/images/IMG_9082.JPG"
+              title="The Coldest Sunset"
+              description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."
+              buttonText="Click Me!"
+            />
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

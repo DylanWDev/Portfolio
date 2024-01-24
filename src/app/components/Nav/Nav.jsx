@@ -32,7 +32,7 @@ const Nav = () => {
         </div>
       </div>
       <div className="flex grow items-center justify-end sm:hidden">
-        <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-violet-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-pink-500">
+        <Popover.Button className="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-violet-600 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-violet-600">
           <span className="sr-only">Open Menu</span>
           <Bars3Icon className="h-6 w-6" aria-hidden="true" />
         </Popover.Button>
