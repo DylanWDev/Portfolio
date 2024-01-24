@@ -58,23 +58,40 @@ export default function Projects() {
           <h1 className="text-white text-4xl font-semibold flex justify-center pb-10">My Projects</h1>
           <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 pt-10">
             <Card
-              imageUrl="/images/IMG_9082.JPG"
-              title="The Coldest Sunset"
-              description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."
+              imageUrl="/images/vitala.png"
+              title="Vitala"
+              description="Calorie Tracking app"
               buttonText="Click Me!"
             />
+
             <Card
-              imageUrl="/images/IMG_9082.JPG"
-              title="The Coldest Sunset"
-              description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."
+              imageUrl="/images/weather-app.png"
+              title="Weather App"
+              description="Easy weather tracking for each zipcode"
               buttonText="Click Me!"
             />
+
             <Card
-              imageUrl="/images/IMG_9082.JPG"
-              title="The Coldest Sunset"
-              description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil."
+              imageUrl="/images/tic-tac-toe.png"
+              title="Tic-Tac-Toe"
+              description="Simple Digital Alarm Clock"
               buttonText="Click Me!"
             />
+
+            <Card
+              imageUrl="/images/alarm-clock.png"
+              title="Alarm Clock"
+              description="App for checking weather mhm yes"
+              buttonText="Click Me!"
+            />
+
+            <Card
+              imageUrl="/images/mind-reader.png"
+              title="Mind Reader"
+              description="I can read your mind!"
+              buttonText="Click Me!"
+            />
+
           </div>
         </div>
       </section>

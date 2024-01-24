@@ -2,9 +2,9 @@ import React from "react";
 
 export default function Card({ imageUrl, title, description, buttonText }) {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-xl w-80 bg-sky-500">
+    <div className="max-w-sm rounded overflow-hidden shadow-xl w-80 backdrop-blur-sm bg-stone-800/40">
       <img
-        className="w-full p-5 rounded-lg"
+        className="w-full p-5 rounded-lg opacity-100"
         src={imageUrl}
         alt="filler"
       />
@@ -15,7 +15,7 @@ export default function Card({ imageUrl, title, description, buttonText }) {
         </p>
       </div>
       <div className="px-6 pt-4 pb-2 flex justify-center">
-        <button className="hire-me rounded-lg transition hover:bg-pink-500 text-white font-semibold py-2 px-4 border border-gray-400  shadow">
+        <button className="hire-me rounded-lg transition hover:bg-violet-600 text-white font-semibold py-2 px-4 border border-gray-400  shadow">
           {buttonText}
         </button>
       </div>
