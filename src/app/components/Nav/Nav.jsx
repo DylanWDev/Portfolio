@@ -7,10 +7,10 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid"
 const Nav = () => {
 
   return (
-    <Popover className="container text-white mx-auto flex items-center border-b-2 px-6 py-2 h-24" placement="top-end">
+    <Popover className="container text-white mx-auto flex items-center px-6 py-2 h-20">
       <Link className="cursor-pointer font-bold" href="/">Portfolio</Link>
       <div className="grow">
-        <div className="hidden cursor-pointer sm:flex items-center justify-end gap-4">
+        <div className="hidden cursor-pointer sm:flex items-center justify-end gap-5">
         <Link className="cursor-pointer" href="about">About</Link>
         <Link href="blog">Blog</Link>
         <Link href="projects">Projects</Link>
@@ -38,7 +38,7 @@ const Nav = () => {
         </Popover.Button>
       </div>
 
-<Popover.Panel focus className="absolute insert-x-0 top-0 origin-top-right transform p-2 transition md:hidden">
+<Popover.Panel focus className="z-5 absolute insert-x-0 top-0 origin-top-right transform p-2 transition md:hidden">
   <div className="rounded-lg  bg-black shadow-lg ring-1 ring-black ring-opacity-5 divide-y-2 divide-gray-50">
     <div className="px-5 pt-5 pb-6">
       <div className="flex items-center justify-between">
