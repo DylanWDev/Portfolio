@@ -7,13 +7,15 @@ export default function Home() {
       <div className="star-bg absolute star-container ">
         <Stars />
       </div>
-      
-      <div className="font-semibold text-white flex flex-col items-center justify-center h-screen text-center relative z-10">
+      <div className="absolute top-0 w-full">
+        <Nav />
+      </div>
+      <div className="pointer-events-none font-semibold text-white flex flex-col items-center justify-center h-screen text-center relative z-10">
         <h1 className="text-6xl pb-10">
-          I'm Dylan.
+          Hi, I'm Dylan.
           <br />
         </h1>
-        <span className="text-2xl pb-5">a web developer.</span>
+        <span className="text-2xl pb-5">a full-stack web developer.</span>
       </div>
     </div>
   );

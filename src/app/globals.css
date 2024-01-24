@@ -11,7 +11,15 @@ html{
 .height {
   height: 100vh; /* Set the desired height */
   overflow: hidden;
+}
+
+.hire-me {
+ 
+  background-color: transparent;
   
+  color: #FFFFFF;
+  text-align: center;
+  transition: all 0.5s;
 }
 
 .star-field {

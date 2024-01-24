@@ -14,7 +14,7 @@ const Nav = () => {
         <Link className="cursor-pointer" href="about">About</Link>
         <Link href="blog">Blog</Link>
         <Link href="projects">Projects</Link>
-        <button className="flex  rounded-lg hover:bg-pink-500 text-white font-semibold py-2 px-4 border border-gray-400  shadow">
+        <button className="hire-me flex  rounded-lg transition hover:bg-pink-500 text-white font-semibold py-2 px-4 border border-gray-400  shadow">
             Hire Me
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -38,8 +38,8 @@ const Nav = () => {
         </Popover.Button>
       </div>
 
-<Popover.Panel focus className="absolute insert-x-0 top-0 origin-top-right transform p-2 transition md:hidden">
-  <div className="rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5 divide-y-2 divide-gray-50">
+<Popover.Panel focus className="float-end absolute insert-x-0 top-0 origin-top-right transform p-2 transition md:hidden">
+  <div className="rounded-lg  bg-black shadow-lg ring-1 ring-black ring-opacity-5 divide-y-2 divide-gray-50">
     <div className="px-5 pt-5 pb-6">
       <div className="flex items-center justify-between">
         <h1 className="font-bold">qwerty</h1>
