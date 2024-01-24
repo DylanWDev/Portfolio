@@ -4,7 +4,7 @@
 
 html{
   height: 100vh;
-  overflow: hidden;
+  
   background-image: radial-gradient(circle, #2f0053, #22084b, #170c41, #100c37, #0c0a2c, #0a0926, #080720, #05061a, #060718, #060815, #080912, #090a0f);
 }
 
