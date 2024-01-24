@@ -5,10 +5,8 @@ import React, { useEffect } from 'react';
 
 export default function Home() {
   useEffect(() => {
-    // Set overflow to "hidden" when the component mounts
     document.body.style.overflow = 'hidden';
 
-    // Clean up by resetting overflow when the component unmounts
     return () => {
       document.body.style.overflow = '';
     };
@@ -16,14 +14,14 @@ export default function Home() {
 
   return (
     <div className="">
-      <div className="absolute top-0 w-full sticky">
+      <div className="absolute top-0 w-full sticky z-50">
         <Nav />
       </div>
       <div className="relative">
         <div className="star-bg absolute star-container">
           <Stars />
         </div>
-        <div className="pb-24 pointer-events-none font-semibold text-white flex flex-col items-center justify-center h-screen text-center relative z-10">
+        <div className="pb-24 font-semibold text-white flex flex-col items-center justify-center h-screen text-center relative z-10">
           <h1 className="text-4xl md:text-5xl lg:text-6xl lg:pb-10 pb-7">
             Hi, I'm Dylan.
             <br />
