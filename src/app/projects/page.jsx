@@ -30,7 +30,7 @@ export default function Projects() {
             <br />
           </h1>
           <span
-            className="text-md lg:text-2xl p-2 border rounded-full animate-bounce cursor-pointer"
+            className="text-md lg:text-2xl p-2 border rounded-full animate-bounce cursor-pointer transition hover:bg-violet-600"
             onClick={scrollToCardsSection}
           >
             <svg
@@ -39,7 +39,7 @@ export default function Projects() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6 text-white"
+              className="w-6 h-6 text-white "
             >
               <path
                 strokeLinecap="round"
@@ -55,7 +55,9 @@ export default function Projects() {
         className="min-h-screen overflow-hidden backdrop-blur-xl flex justify-center items-center"
       >
         <div className="">
-          <h1 className="text-white text-4xl font-semibold flex justify-center pb-10">My Projects</h1>
+          <h1 className="text-white text-4xl font-semibold flex justify-center pb-10">
+            My Projects
+          </h1>
           <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 pt-10">
             <Card
               imageUrl="/images/vitala.png"
@@ -91,7 +93,6 @@ export default function Projects() {
               description="I can read your mind!"
               buttonText="Click Me!"
             />
-
           </div>
         </div>
       </section>
