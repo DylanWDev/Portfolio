@@ -15,6 +15,8 @@ export default function Projects() {
     }
   };
 
+  
+
   return (
     <div>
       <div className="absolute top-0 w-full sticky z-10">
@@ -64,6 +66,7 @@ export default function Projects() {
               title="Vitala"
               description="Calorie Tracking app"
               buttonText="Click Me!"
+              buttonLink="https://github.com/DylanWDev/Vitala-Frontend"
             />
 
             <Card
@@ -71,6 +74,7 @@ export default function Projects() {
               title="Weather App"
               description="Easy weather tracking for each zipcode"
               buttonText="Click Me!"
+              buttonLink="https://github.com/DylanWDev/weather-app"
             />
 
             <Card
@@ -78,6 +82,7 @@ export default function Projects() {
               title="Tic-Tac-Toe"
               description="Simple Digital Alarm Clock"
               buttonText="Click Me!"
+              buttonLink="https://github.com/DylanWDev/tic-tac-toe"
             />
 
             <Card
@@ -85,6 +90,7 @@ export default function Projects() {
               title="Alarm Clock"
               description="App for checking weather mhm yes"
               buttonText="Click Me!"
+              buttonLink="https://github.com/DylanWDev/alarm-clock"
             />
 
             <Card
@@ -92,6 +98,7 @@ export default function Projects() {
               title="Mind Reader"
               description="I can read your mind!"
               buttonText="Click Me!"
+              buttonLink="https://github.com/DylanWDev/mind-reader"
             />
           </div>
         </div>

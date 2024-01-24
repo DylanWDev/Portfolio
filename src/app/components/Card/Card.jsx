@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Card({ imageUrl, title, description, buttonText }) {
+export default function Card({ imageUrl, title, description, buttonText, buttonLink }) {
   return (
     <div className="max-w-sm rounded overflow-hidden shadow-xl w-80 backdrop-blur-sm bg-stone-800/40">
       <div className="aspect-w-16 aspect-h-9"> {/* Aspect ratio container */}
@@ -14,8 +14,8 @@ export default function Card({ imageUrl, title, description, buttonText }) {
         <span></span>
       </div>
       <div className="flex justify-center mb-5">
-        <button className="hire-me hover:animate-pulse rounded-lg transition hover:bg-violet-600 text-white font-semibold py-2 px-4 border border-gray-400 shadow">
-          {buttonText}
+        <button className="hire-me rounded-lg transition hover:bg-violet-600 text-white font-semibold py-2 px-4 border border-gray-400 shadow">
+          <a href={buttonLink}>{buttonText}</a>
         </button>
       </div>
     </div>
