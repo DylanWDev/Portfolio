@@ -7,8 +7,13 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid"
 const Nav = () => {
 
   return (
-    <Popover className="container text-white mx-auto flex items-center px-6 py-2 h-20">
+    <Popover className="nav container text-white mx-auto flex items-center px-6 py-2 h-20">
       <Link className="cursor-pointer font-bold" href="/">Portfolio</Link>
+      {/* <img
+        className="w-10 h-10 rounded-full"
+        src="/images/IMG_9082.JPG"
+        alt="filler"
+      /> */}
       <div className="grow">
         <div className="hidden cursor-pointer sm:flex items-center justify-end gap-5">
         <Link className="cursor-pointer" href="about">About</Link>

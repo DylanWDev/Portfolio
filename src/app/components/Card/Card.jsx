@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Card({ imageUrl, title, description, buttonText }) {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-xl w-80 bg-sky-500/50">
+    <div className="max-w-sm rounded overflow-hidden shadow-xl w-80 bg-sky-500">
       <img
         className="w-full p-5 rounded-lg"
         src={imageUrl}

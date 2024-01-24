@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React from "react";
 import Nav from "../components/Nav/Nav";
 import Stars from "../components/Stars/Stars";
@@ -17,12 +17,12 @@ export default function Projects() {
 
   return (
     <div>
+      <div className="absolute top-0 w-full sticky z-10">
+        <Nav />
+      </div>
       <section className="min-h-screen relative">
         <div className="star-bg absolute star-container">
           <Stars />
-        </div>
-        <div className="absolute top-0 w-full sticky">
-          <Nav />
         </div>
         <div className="flex flex-col items-center justify-center h-screen relative z-10">
           <h1 className="text-4xl md:text-5xl lg:text-6xl lg:pb-10 pb-7 text-white">
@@ -39,7 +39,7 @@ export default function Projects() {
               viewBox="0 0 24 24"
               strokeWidth={1.5}
               stroke="currentColor"
-              className="w-6 h-6"
+              className="w-6 h-6 text-white"
             >
               <path
                 strokeLinecap="round"
@@ -52,10 +52,11 @@ export default function Projects() {
       </section>
       <section
         id="cards-section"
-        className="min-h-screen overflow-hidden bg-white"
+        className="min-h-screen overflow-hidden backdrop-blur-xl flex justify-center items-center"
       >
-        <div className="grid justify-items-center h-full">
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5">
+        <div className="">
+          <h1 className="text-white text-4xl font-semibold flex justify-center pb-10">My Projects</h1>
+          <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-5 pt-10">
             <Card
               imageUrl="/images/IMG_9082.JPG"
               title="The Coldest Sunset"
