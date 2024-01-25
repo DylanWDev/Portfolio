@@ -16,19 +16,23 @@ export default function Projects() {
 
   const scrollToCardsSection = () => {
     const cardsSection = document.getElementById("cards-section");
-
+  
     if (cardsSection) {
-      const isMobileView = window.innerWidth <= 640; // Adjust the breakpoint as needed
-      const scrollOffset = isMobileView ? cardsSection.offsetTop - navHeight : cardsSection.offsetTop;
+      const isMobileView = window.innerWidth <= 640;
+      const scrollOffset = isMobileView
+        ? cardsSection.offsetTop - navHeight
+        : cardsSection.offsetTop - navHeight + window.innerHeight / 2;
+  
+      const maxScroll = cardsSection.offsetTop - navHeight;
       window.scrollTo({
-        top: scrollOffset,
+        top: Math.min(scrollOffset, maxScroll),
         behavior: "smooth",
       });
     }
   };
 
   return (
-    <div>
+    <div className="">
       <div id="nav" className="absolute top-0 w-full sticky z-10">
         <Nav />
       </div>
@@ -64,7 +68,7 @@ export default function Projects() {
       </section>
       <section
         id="cards-section"
-        className="min-h-screen overflow-hidden backdrop-blur-xl flex justify-center items-center pb-10"
+        className="min-h-screen overflow-hidden backdrop-blur-xl flex justify-center items-center"
       >
         <div className="">
           <h1 className="text-white text-4xl font-semibold flex justify-center pb-10">
