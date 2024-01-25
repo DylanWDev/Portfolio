@@ -8,7 +8,7 @@ const Nav = () => {
   return (
     <Popover className="nav container text-white mx-auto flex items-center px-6 py-2 h-20">
       <Link className="cursor-pointer font-bold" href="/">
-        Portfolio
+        DylanWDev
       </Link>
       {/* <img
         className="w-10 h-10 rounded-full"
