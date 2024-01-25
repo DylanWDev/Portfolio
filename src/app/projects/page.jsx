@@ -64,7 +64,7 @@ export default function Projects() {
       </section>
       <section
         id="cards-section"
-        className="min-h-screen overflow-hidden backdrop-blur-xl flex justify-center items-center"
+        className="min-h-screen overflow-hidden backdrop-blur-xl flex justify-center items-center pb-10"
       >
         <div className="">
           <h1 className="text-white text-4xl font-semibold flex justify-center pb-10">
