@@ -48,9 +48,8 @@ const Nav = () => {
 
       <Popover.Panel
         focus
-        className="z-5 absolute insert-x-0 top-0 origin-top-right transform p-2 transition md:hidden float-end"
-      >
-        <div className="rounded-lg  bg-black shadow-lg ring-1 ring-black ring-opacity-5 divide-y-2 divide-gray-50">
+        className="z-5 absolute right-0 left-auto top-0 origin-top-right transform transition md:hidden"      >
+        <div className=" rounded-lg p-5 bg-black shadow-lg ring-1 ring-black ring-opacity-5 divide-y-2 divide-gray-50">
           <div clas4sName="px-5 pt-5 pb-6">
             <div className="flex items-center justify-between">
               <h1 className="font-bold mr-3">Close Menu</h1>
