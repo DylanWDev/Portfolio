@@ -16,13 +16,13 @@ export default function Projects() {
 
   const scrollToCardsSection = () => {
     const cardsSection = document.getElementById("cards-section");
-  
+
     if (cardsSection) {
       const isMobileView = window.innerWidth <= 640;
       const scrollOffset = isMobileView
         ? cardsSection.offsetTop - navHeight
         : cardsSection.offsetTop - navHeight + window.innerHeight / 2;
-  
+
       const maxScroll = cardsSection.offsetTop - navHeight;
       window.scrollTo({
         top: Math.min(scrollOffset, maxScroll),
@@ -40,13 +40,13 @@ export default function Projects() {
         <div className="star-bg absolute star-container">
           <Stars />
         </div>
-        <div className="flex flex-col items-center justify-center h-screen relative z-10">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl lg:pb-10 pb-7 text-white">
+        <div className="flex flex-col items-center justify-center h-screen relative z-5 pb-24">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl lg:pb-10 text-white">
             View My Work
             <br />
           </h1>
           <span
-            className="text-md lg:text-2xl p-2 border rounded-full animate-bounce cursor-pointer transition hover:bg-violet-600"
+            className="text-md lg:text-2xl mt-8 md:mt-10 lg:mt-0 p-2 border rounded-full animate-bounce cursor-pointer transition hover:bg-violet-600"
             onClick={scrollToCardsSection}
           >
             <svg
