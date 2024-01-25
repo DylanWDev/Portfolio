@@ -1,25 +1,35 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Nav from "../components/Nav/Nav";
 import Stars from "../components/Stars/Stars";
 import Card from "../components/Card/Card";
 
 export default function Projects() {
+  const [navHeight, setNavHeight] = useState(0);
+
+  useEffect(() => {
+    const nav = document.getElementById("nav");
+    if (nav) {
+      setNavHeight(nav.offsetHeight);
+    }
+  }, []);
+
   const scrollToCardsSection = () => {
     const cardsSection = document.getElementById("cards-section");
 
     if (cardsSection) {
-      cardsSection.scrollIntoView({
+      const isMobileView = window.innerWidth <= 640; // Adjust the breakpoint as needed
+      const scrollOffset = isMobileView ? cardsSection.offsetTop - navHeight : cardsSection.offsetTop;
+      window.scrollTo({
+        top: scrollOffset,
         behavior: "smooth",
       });
     }
   };
 
-  
-
   return (
     <div>
-      <div className="absolute top-0 w-full sticky z-10">
+      <div id="nav" className="absolute top-0 w-full sticky z-10">
         <Nav />
       </div>
       <section className="min-h-screen relative">
