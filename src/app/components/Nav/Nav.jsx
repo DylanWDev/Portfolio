@@ -4,30 +4,20 @@ import Link from "next/link";
 import { Popover } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
-const Nav = ({ currentPath }) => {
+const Nav = () => {
   return (
     <Popover className="nav container text-white mx-auto flex items-center px-6 py-2 h-20">
-      <Link href="/" passHref>
-        <div className="font-bold text-lg cursor-pointer">DylanWDev</div>
+      <Link className=" font-bold text-lg" href="/">
+        DylanWDev
       </Link>
       <div className="grow">
         <div className="hidden text-lg sm:flex items-center justify-end gap-5">
-          <Link href="/about" passHref>
-            <div className={`relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center ${currentPath === "/about" ? "after:scale-x-100" : ""}`}>
-              About
-            </div>
+          <Link className="relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center" href="about">
+            About
           </Link>
-          <Link href="/blog" passHref>
-            <div className={`relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center ${currentPath === "/blog" ? "after:scale-x-100" : ""}`}>
-              Blog
-            </div>
-          </Link>
-          <Link href="/projects" passHref>
-            <div className={`relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center ${currentPath === "/projects" ? "after:scale-x-100" : ""}`}>
-              Work
-            </div>
-          </Link>
-          <button className="hire-me flex rounded-lg transition hover:bg-violet-600 text-white font-semibold py-2 px-4 border border-gray-400 shadow">
+          <Link className="relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center" href="blog">Blog</Link>
+          <Link className="relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center" href="projects">Work</Link>
+          <button className="hire-me flex  rounded-lg transition hover:bg-violet-600 text-white font-semibold py-2 px-4 border border-gray-400  shadow">
             Hire Me
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -35,7 +25,11 @@ const Nav = ({ currentPath }) => {
               fill="currentColor"
               className="ml-2 w-5 h-6"
             >
-              {/* ... */}
+              <path
+                fillRule="evenodd"
+                d="M12.97 3.97a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06l6.22-6.22H3a.75.75 0 0 1 0-1.5h16.19l-6.22-6.22a.75.75 0 0 1 0-1.06Z"
+                clipRule="evenodd"
+              />
             </svg>
           </button>
         </div>
@@ -49,8 +43,7 @@ const Nav = ({ currentPath }) => {
 
       <Popover.Panel
         focus
-        className="z-5 absolute right-0 left-auto top-0 origin-top-right transform transition md:hidden"
-      >
+        className="z-5 absolute right-0 left-auto top-0 origin-top-right transform transition md:hidden"      >
         <div className=" rounded-lg p-5 bg-black shadow-lg ring-1 ring-black ring-opacity-5 divide-y-2 divide-gray-50">
           <div clas4sName="px-5 pt-5 pb-6">
             <div className="flex items-center justify-between">
@@ -64,22 +57,25 @@ const Nav = ({ currentPath }) => {
             </div>
             <div className="mt-6">
               <nav className="grid gap-y-8">
-                <Link href="/about" passHref>
-                  <div className={`focus:outline-none focus:ring-2 focus:ring-insert focus:ring-gray-500 px-2 ${currentPath === "/about" ? "text-violet-600" : ""}`}>
-                    About
-                  </div>
+                <Link
+                  className="focus:outline-none focus:ring-2 focus:ring-insert focus:ring-gray-500 px-2"
+                  href="/about"
+                >
+                  About
                 </Link>
-                <Link href="/blog" passHref>
-                  <div className={`focus:outline-none focus:ring-2 focus:ring-insert focus:ring-gray-500 px-2 ${currentPath === "/blog" ? "text-violet-600" : ""}`}>
-                    Blog
-                  </div>
+                <Link
+                  className="focus:outline-none focus:ring-2 focus:ring-insert focus:ring-gray-500 px-2"
+                  href="/blog"
+                >
+                  Blog
                 </Link>
-                <Link href="/projects" passHref>
-                  <div className={`focus:outline-none focus:ring-2 focus:ring-insert focus:ring-gray-500 px-2 ${currentPath === "/projects" ? "text-violet-600" : ""}`}>
-                    Work
-                  </div>
+                <Link
+                  className="focus:outline-none focus:ring-2 focus:ring-insert focus:ring-gray-500 px-2"
+                  href="/projects"
+                >
+                  Work
                 </Link>
-                <button className="hire-me flex w-18 rounded-lg transition hover:bg-violet-600 text-white font-semibold py-2 px-4 border border-gray-400 shadow">
+                <button className="hire-me flex w-18 rounded-lg transition hover:bg-violet-600 text-white font-semibold py-2 px-4 border border-gray-400  shadow">
                   Hire Me
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -87,7 +83,11 @@ const Nav = ({ currentPath }) => {
                     fill="currentColor"
                     className="ml-2 w-5 h-6"
                   >
-                    {/* ... */}
+                    <path
+                      fillRule="evenodd"
+                      d="M12.97 3.97a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 0 1 0 1.06l-7.5 7.5a.75.75 0 1 1-1.06-1.06l6.22-6.22H3a.75.75 0 0 1 0-1.5h16.19l-6.22-6.22a.75.75 0 0 1 0-1.06Z"
+                      clipRule="evenodd"
+                    />
                   </svg>
                 </button>
               </nav>
@@ -100,4 +100,3 @@ const Nav = ({ currentPath }) => {
 };
 
 export default Nav;
-
