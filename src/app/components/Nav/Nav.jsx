@@ -12,11 +12,11 @@ const Nav = () => {
       </Link>
       <div className="grow">
         <div className="hidden text-lg sm:flex items-center justify-end gap-5">
-          <Link className="relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center" href="about">
+          <Link className="relative w-fit transition ease-in-out hover:text-violet-600 block after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center" href="about">
             About
           </Link>
-          <Link className="relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center" href="blog">Blog</Link>
-          <Link className="relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center" href="projects">Work</Link>
+          <Link className="relative w-fit block transition ease-in-out hover:text-violet-600 after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center" href="blog">Blog</Link>
+          <Link className="relative w-fit block transition ease-in-out hover:text-violet-600 after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center" href="projects">Work</Link>
           <button className="hire-me flex  rounded-lg transition hover:bg-violet-600 text-white font-semibold py-2 px-4 border border-gray-400  shadow">
             Hire Me
             <svg
