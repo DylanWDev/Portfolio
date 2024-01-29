@@ -2,7 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-html{
+@font-face {
+  font-family: 'Minecraft World4Play.com';
+  src: url('https://www.fontsaddict.com/fontface/minecraft-world4playcom.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+* {
+  font-family: 'Minecraft World4Play.com', sans-serif;
+}
+
+html {
   height: 100vh;
   
   background-image: radial-gradient(circle, #2f0053, #22084b, #170c41, #100c37, #0c0a2c, #0a0926, #080720, #05061a, #060718, #060815, #080912, #090a0f);
@@ -14,9 +25,7 @@ html{
 }
 
 .hire-me {
- 
   background-color: transparent;
-  
   color: #FFFFFF;
   text-align: center;
   transition: all 0.5s;
