@@ -1,15 +1,13 @@
 "use client"
 import React, { useEffect, useState } from 'react';
 
-
-
 export default function Home() {
   const [stars, setStars] = useState([]);
 
   const generateStars = () => {
-    const numStars = 275; // Adjust the number of stars as needed
+    const numStars = 225; // Adjust the number of stars as needed
     const starsArray = [];
-    
+
     const heightDiv = document.querySelector('.height');
     const heightDivRect = heightDiv.getBoundingClientRect();
 
@@ -24,10 +22,13 @@ export default function Home() {
       // Random opacity for twinkling effect
       const opacity = Math.random() * 0.5 + 0.5; // Adjust the range as needed
 
+      // Random rotation for each star
+      const rotation = Math.floor(Math.random() * 360); // Random rotation in degrees
+
       // Random delay for the twinkling animation
       const animationDelay = Math.random() * 5 + 's'; // Adjust the range as needed
 
-      starsArray.push({ x, y, size, color, opacity, animationDelay });
+      starsArray.push({ x, y, size, color, opacity, rotation, animationDelay });
     }
 
     setStars(starsArray);
@@ -60,6 +61,7 @@ export default function Home() {
               left: star.x + 'px',
               top: star.y + 'px',
               opacity: star.opacity,
+              transform: `rotate(${star.rotation}deg)`, // Set the rotation
               animation: `twinkle 2s infinite alternate ${star.animationDelay}`,
             }}
           ></div>

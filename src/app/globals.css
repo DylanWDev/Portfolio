@@ -37,8 +37,9 @@ html {
 
 .star {
   position: absolute;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   transition: opacity 2s alternate;
+  box-shadow: 0 0 3px rgba(255, 255, 255, 0.7);
   transform-origin: center;
 }
 
@@ -49,11 +50,10 @@ html {
 @keyframes twinkle {
   0% {
     opacity: 0.2;
-    transform: scale(1.2);
   }
   100% {
     opacity: 1;
-    transform: scale(1.4);
   }
 }
+
 

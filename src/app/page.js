@@ -4,19 +4,14 @@ import Nav from "./components/Nav/Nav.jsx";
 import React, { useEffect } from 'react';
 
 export default function Home() {
-  useEffect(() => {
-    document.body.style.overflow = 'hidden';
-
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, []);
+  
 
   return (
     <div className="">
-      <div className="absolute top-0 w-full sticky z-50">
+      <div className="absolute top-0 w-full z-50">
         <Nav />
       </div>
+      <section>
       <div className="relative">
         <div className="star-bg absolute star-container">
           <Stars />
@@ -31,6 +26,7 @@ export default function Home() {
           </span>
         </div>
       </div>
+      </section>
     </div>
   );
 }
