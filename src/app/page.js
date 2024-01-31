@@ -1,27 +1,18 @@
-"use client"
+"use client";
 import Stars from "./components/Stars/Stars.jsx";
 import Nav from "./components/Nav/Nav.jsx";
-import React, { useEffect } from 'react';
+import React from 'react';
+import About from "./components/About/About.jsx";
 
 export default function Home() {
-  useEffect(() => {
-    document.body.style.overflow = 'hidden';
-
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, []);
-
+  
   return (
-    <div className="">
-      <div className="absolute top-0 w-full sticky z-50">
-        <Nav />
-      </div>
-      <div className="relative">
+    <>
+      <div className="relative"> 
         <div className="star-bg absolute star-container">
           <Stars />
         </div>
-        <div className="pb-24 font-semibold text-white flex flex-col items-center justify-center h-screen text-center relative z-10">
+        <div className="font-semibold text-white flex flex-col items-center justify-center h-screen text-center relative z-10">
           <h1 className="text-4xl md:text-5xl lg:text-6xl lg:pb-10 pb-7">
             Hi, I'm Dylan.
             <br />
@@ -31,6 +22,22 @@ export default function Home() {
           </span>
         </div>
       </div>
-    </div>
+
+      <div className="absolute top-0 w-full z-50">
+        <Nav />
+      </div>
+
+      <div id="about" className="bg-black">
+        <div>
+          <About/>
+        </div>
+      </div>
+
+      <div id="work" className="bg-blue-600">
+        <div>
+          <About/>
+        </div>
+      </div>
+    </>  
   );
 }
