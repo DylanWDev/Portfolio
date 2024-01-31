@@ -37,7 +37,7 @@ export default function Home() {
         <div className="star-bg absolute star-container">
           <Stars />
         </div>
-        <div className="font-semibold text-white flex flex-col items-center justify-center h-screen text-center relative z-10">
+        <div className="font-semibold text-white flex flex-col items-center justify-center h-svh text-center relative z-10">
           <h1 className="text-4xl md:text-5xl lg:text-6xl lg:pb-10 pb-7" style={{ textShadow: '4px 4px gray' }}>
             Hi, I'm Dylan.
             <br />
