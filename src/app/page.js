@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Stars from "./components/Stars/Stars.jsx";
 import Nav from "./components/Nav/Nav.jsx";
 import About from "./components/About/About.jsx";
+import Jukebox from "./components/jukebox/Jukebox.jsx";
 
 export default function Home() {
   const [navHeight, setNavHeight] = useState(0);
@@ -64,11 +65,7 @@ export default function Home() {
         </div>
       </div>
   
-      <img
-        className="size-16 fixed bottom-0 right-0 m-5"
-        src="/images/music-disks/pigstep.png"
-        alt="Pigstep Image"
-      />
+      <Jukebox/>
     </>
   );
 }
