@@ -2,7 +2,7 @@ import React from "react";
 
 export default function About() {
   return (
-    <div className="container h-svh mx-auto p-8">
+    <div className="container h-screen mx-auto p-8">
       <h1 className="text-3xl md:text-5xl lg:text-5xl text-white font-bold mb-4">About Me</h1>
       <div className="grid place-content-center">
         <p className="text-md md:text-xl lg:text-2xl text-gray-700">
