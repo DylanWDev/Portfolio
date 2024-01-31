@@ -5,7 +5,14 @@ export default function Home() {
   const [stars, setStars] = useState([]);
 
   const generateStars = () => {
-    const numStars = 125; // Adjust the number of stars as needed
+    let numStars;
+
+    if (window.innerWidth < 600) {
+      numStars = 50;
+    } else {
+      numStars = 125;
+    }
+
     const starsArray = [];
 
     const heightDiv = document.querySelector('.height');
@@ -37,13 +44,19 @@ export default function Home() {
   useEffect(() => {
     // Initial star generation
     generateStars();
-
-    // Regenerate stars when the window is resized
-    window.addEventListener('resize', generateStars);
-
+  
+    // Regenerate stars when the window is resized (only on non-mobile devices)
+    const handleResize = () => {
+      if (window.innerWidth >= 600) { // Adjust the threshold as needed
+        generateStars();
+      }
+    };
+  
+    window.addEventListener('resize', handleResize);
+  
     // Clean up the event listener when the component unmounts
     return () => {
-      window.removeEventListener('resize', generateStars);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
