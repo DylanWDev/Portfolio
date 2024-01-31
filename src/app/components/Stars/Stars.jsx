@@ -5,14 +5,14 @@ export default function Home() {
   const [stars, setStars] = useState([]);
 
   const generateStars = () => {
-    const numStars = 225; // Adjust the number of stars as needed
+    const numStars = 125; // Adjust the number of stars as needed
     const starsArray = [];
 
     const heightDiv = document.querySelector('.height');
     const heightDivRect = heightDiv.getBoundingClientRect();
 
     for (let i = 0; i < numStars; i++) {
-      const size = Math.floor(Math.random() * 3) + 1; // Random star size
+      const size = Math.floor(Math.random() * 5) + 1; // Random star size
       const x = Math.random() * window.innerWidth; // Random X position within viewport width
       const y = Math.random() * (heightDivRect.height - size); // Random Y position within the height of the ".height" div
 

@@ -16,26 +16,26 @@ const Nav = () => {
 
   return (
     <Popover className="nav container text-white mx-auto flex items-center px-6 py-2 h-20">
-      <Link className=" font-bold text-lg" href="/">
+      <a className=" font-bold text-lg" href="/">
         DylanWDev
-      </Link>
+      </a>
       <div className="grow">
         <div className="hidden text-lg sm:flex items-center justify-end gap-5">
-          <Link href="/about">
+          <a href="#about">
             <span
               className={`relative w-fit block transition ease-in-out hover:text-violet-600 cursor-pointer after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center ${
-                isCurrentPage("/about") ? "text-violet-600" : ""
+                isCurrentPage("#about") ? "text-violet-600" : ""
               }`}
             >
               About
               <span
                 className={`absolute block after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center ${
-                  isCurrentPage("/about") ? "scale-x-100" : ""
+                  isCurrentPage("#about") ? "scale-x-100" : ""
                 }`}
               ></span>
             </span>
-          </Link>
-          <Link href="/blog">
+          </a>
+          <a href="/blog">
             <span
               className={`relative w-fit block transition ease-in-out hover:text-violet-600 cursor-pointer after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center ${
                 isCurrentPage("/blog") ? "text-violet-600" : ""
@@ -48,21 +48,21 @@ const Nav = () => {
                 }`}
               ></span>
             </span>
-          </Link>
-          <Link href="/work">
+          </a>
+          <a href="#work">
             <span
               className={`relative w-fit block transition ease-in-out hover:text-violet-600 cursor-pointer after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center ${
-                isCurrentPage("/work") ? "text-violet-600" : ""
+                isCurrentPage("#work") ? "text-violet-600" : ""
               }`}
             >
               Work
               <span
                 className={`absolute block after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center ${
-                  isCurrentPage("/work") ? "scale-x-100" : ""
+                  isCurrentPage("#work") ? "scale-x-100" : ""
                 }`}
               ></span>
             </span>
-          </Link>
+          </a>
           <button className="hire-me flex rounded-lg transition hover:bg-violet-600 text-white font-semibold py-2 px-4 border border-gray-400  shadow">
             Hire Me
             <svg

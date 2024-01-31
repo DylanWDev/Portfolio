@@ -27,10 +27,15 @@ export default function Home() {
         <Nav />
       </div>
 
-      <div className="relative bg-black">
+      <div id="about" className="bg-black">
         <div>
           <About/>
-          <h1 className="text-white">About</h1>
+        </div>
+      </div>
+
+      <div id="work" className="bg-blue-600">
+        <div>
+          <About/>
         </div>
       </div>
     </>  
