@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import Link from "next/link";
+import a from "next/link";
 import { Popover } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import { useRouter } from "next/navigation";
@@ -35,16 +35,16 @@ const Nav = () => {
               ></span>
             </span>
           </a>
-          <a href="/blog">
+          <a href="#blog">
             <span
               className={`relative w-fit block transition ease-in-out hover:text-violet-600 cursor-pointer after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center ${
-                isCurrentPage("/blog") ? "text-violet-600" : ""
+                isCurrentPage("#blog") ? "text-violet-600" : ""
               }`}
             >
               Blog
               <span
                 className={`absolute block after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center ${
-                  isCurrentPage("/blog") ? "scale-x-100" : ""
+                  isCurrentPage("#blog") ? "scale-x-100" : ""
                 }`}
               ></span>
             </span>
@@ -104,24 +104,25 @@ const Nav = () => {
             </div>
             <div className="mt-6">
               <nav className="grid gap-y-8">
-                <Link
+                <a
                   className="focus:outline-none focus:ring-2 focus:ring-insert focus:ring-gray-500 px-2"
-                  href="/about"
+                  href="#about"
+                  onClick={isCurrentPage}
                 >
                   About
-                </Link>
-                <Link
+                </a>
+                <a
                   className="focus:outline-none focus:ring-2 focus:ring-insert focus:ring-gray-500 px-2"
-                  href="/blog"
+                  href="#blog"
                 >
                   Blog
-                </Link>
-                <Link
+                </a>
+                <a
                   className="focus:outline-none focus:ring-2 focus:ring-insert focus:ring-gray-500 px-2"
                   href="/work"
                 >
                   Work
-                </Link>
+                </a>
                 <button className="hire-me flex w-18 rounded-lg transition hover:bg-violet-600 text-white font-semibold py-2 px-4 border border-gray-400  shadow">
                   Hire Me
                   <svg
