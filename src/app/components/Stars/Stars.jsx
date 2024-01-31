@@ -12,7 +12,7 @@ export default function Home() {
     const heightDivRect = heightDiv.getBoundingClientRect();
 
     for (let i = 0; i < numStars; i++) {
-      const size = Math.floor(Math.random() * 5) + 1; // Random star size
+      const size = Math.floor(Math.random() * 6) + 1; // Random star size
       const x = Math.random() * window.innerWidth; // Random X position within viewport width
       const y = Math.random() * (heightDivRect.height - size); // Random Y position within the height of the ".height" div
 
