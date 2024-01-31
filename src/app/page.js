@@ -41,7 +41,7 @@ export default function Home() {
   
       <img
         className="size-16 fixed bottom-0 right-0 m-5"
-        src="/images/pigstep.png"
+        src="/images/music-disks/pigstep.png"
         alt="Pigstep Image"
       />
     </>
