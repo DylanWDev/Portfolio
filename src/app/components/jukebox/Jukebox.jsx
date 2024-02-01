@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import MusicDiscButton from "./button";
 
 export default function Jukebox() {
-  const [volume, setVolume] = useState(50);
+  const [volume, setVolume] = useState(0);
   const [selectedMusicDisc, setSelectedMusicDisc] = useState(
     localStorage.getItem("selectedMusicDisc") || "/images/music-discs/13.png"
   );
@@ -10,11 +10,19 @@ export default function Jukebox() {
     localStorage.getItem("selectMp3") || "/music/music-discs/13.mp3"
   );
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [audio, setAudio] = useState(null);
 
   useEffect(() => {
     // This effect will run when the component mounts
     handlePlay();
   }, []); // The empty dependency array ensures this effect runs only once on mount
+
+  useEffect(() => {
+    // This effect will run whenever the volume changes
+    if (audio) {
+      audio.volume = volume / 100;
+    }
+  }, [volume, audio]); // Dependency array includes volume and audio
 
   const handleVolumeChange = (event) => {
     setVolume(event.target.value);
@@ -37,11 +45,15 @@ export default function Jukebox() {
   };
 
   const handlePlay = () => {
-    const audio = new Audio(selectMp3);
-    audio.volume = volume / 100;
-    audio.play();
-  };
+    if (audio) {
+      audio.pause(); // Pause the previous audio before playing a new one
+    }
 
+    const newAudio = new Audio(selectMp3);
+    newAudio.volume = volume / 100;
+    newAudio.play();
+    setAudio(newAudio);
+  };
   return (
     <>
       <div className="flex flex-col z-10 fixed bottom-0 right-0 m-5">
