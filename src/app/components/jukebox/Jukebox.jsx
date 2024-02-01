@@ -5,11 +5,9 @@ export default function Jukebox() {
   const [volume, setVolume] = useState(0);
   const [volumeImage, setVolumeImage] = useState("/images/icons/mute.png");
   const [selectedMusicDisc, setSelectedMusicDisc] = useState(
-    localStorage.getItem("selectedMusicDisc") || "/images/music-discs/13.png"
-  );
-  const [selectMp3, setSelectMp3] = useState(
-    localStorage.getItem("selectMp3") || "/music/music-discs/13.mp3"
-  );
+    "/images/music-discs/13.png"
+  ); // Provide default value in case localStorage is not available
+  const [selectMp3, setSelectMp3] = useState("/music/music-discs/13.mp3"); // Provide default value
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [audio, setAudio] = useState(null);
 
@@ -24,6 +22,17 @@ export default function Jukebox() {
     }
     updateVolumeImage(volume); // Update volume image on volume change
   }, [volume, audio]);
+
+  useEffect(() => {
+    // Check if localStorage is available before using it
+    const storedMusicDisc = localStorage.getItem("selectedMusicDisc");
+    const storedMp3 = localStorage.getItem("selectMp3");
+
+    if (storedMusicDisc && storedMp3) {
+      setSelectedMusicDisc(storedMusicDisc);
+      setSelectMp3(storedMp3);
+    }
+  }, []);
 
   const handleVolumeChange = (event) => {
     setVolume(event.target.value);
@@ -65,8 +74,6 @@ export default function Jukebox() {
     newAudio.play();
     setAudio(newAudio);
   };
-
-
   
   return (
     <>
