@@ -55,6 +55,10 @@ html {
   }
 }
 
+#moon {
+  box-shadow: 0 0 300px rgba(255, 255, 255, 0.4);
+}
+
 
   /* Special styling for WebKit/Blink */
 #volume[type=range]::-webkit-slider-thumb {
