@@ -87,18 +87,32 @@ export default function Jukebox() {
     }
   };
 
+
+  const handleClosedModel = () => {
+    setIsModalOpen(false);
+  }
+
+  const handleMute = () => {
+    if (volume > 0) {
+      setVolume(0)
+    } else {
+      setVolume(5)
+    }
+  }
+
   return (
     <>
-      <div
-        className="flex flex-col z-10 fixed bottom-0 right-0 m-5"
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        <div className="flex justify-center items-center flex-row-reverse">
+      <div className="flex flex-col z-10 fixed bottom-0 right-0 m-5">
+        <div
+          className="flex justify-center items-center flex-row-reverse"
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+        >
           <img
             className="size-7 ml-auto transition ease-in-out hover:scale-110 cursor-pointer"
             src={volumeImage}
             alt="volume button"
+            onClick={handleMute}
           />
 
           {isHovered && (
@@ -133,7 +147,10 @@ export default function Jukebox() {
         // For simplicity, I'm using a basic alert in this example
         <div className="z-10 fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-75">
           <div className="bg-gray-100 p-5 shadow-lg">
-            <h2 className="text-lg font-bold mb-5">Choose a Music Disc</h2>
+            <div className="flex justify-center items-center gap-5 mb-5">
+              <h2 className="text-lg font-bold">Choose a Music Disc</h2>
+              <button className="transition bg-gray-600 size-7 text-xl hover:bg-gray-700" onClick={handleClosedModel}>x</button>
+            </div>
             <div className="bg-white p-8 shadow-md h-60 overflow-y-auto">
               <MusicDiscButton
                 onClick={() =>
@@ -313,8 +330,8 @@ export default function Jukebox() {
             </div>
             <div className="flex justify-center items-center mt-5">
               <button
-                className={`border-solid border-2 text-white p-1 h-8 text-center w-16 ${
-                  isPlaying ? "bg-red-500" : "bg-green-500"
+                className={`border-solid border-2 text-white p-1 h-8 text-center w-16 transition ${
+                  isPlaying ? "bg-red-500 hover:bg-red-600" : "bg-green-500 hover:bg-green-600"
                 }`}
                 onClick={handlePlayPause}
               >
