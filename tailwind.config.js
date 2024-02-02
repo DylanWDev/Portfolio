@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundColor: {
-        NavBGExtend: '#090a0f',
+        DarkBG: '#0C0B0B',
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
