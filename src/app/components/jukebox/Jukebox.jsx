@@ -92,6 +92,14 @@ export default function Jukebox() {
     setIsModalOpen(false);
   }
 
+  const handleMute = () => {
+    if (volume > 0) {
+      setVolume(0)
+    } else {
+      setVolume(5)
+    }
+  }
+
   return (
     <>
       <div className="flex flex-col z-10 fixed bottom-0 right-0 m-5">
@@ -104,6 +112,7 @@ export default function Jukebox() {
             className="size-7 ml-auto transition ease-in-out hover:scale-110 cursor-pointer"
             src={volumeImage}
             alt="volume button"
+            onClick={handleMute}
           />
 
           {isHovered && (
