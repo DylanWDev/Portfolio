@@ -120,9 +120,9 @@ export default function Jukebox() {
         // Your modal or UI for music disc selection goes here
         // For simplicity, I'm using a basic alert in this example
         <div className="z-10 fixed top-0 left-0 w-full h-full flex items-center justify-center bg-gray-800 bg-opacity-75">
-          <div className="bg-white p-8 shadow-lg h-80 overflow-y-auto">
+          <div className="bg-gray-100 p-8 shadow-lg">
             <h2 className="text-lg font-bold mb-4">Choose a Music Disc</h2>
-
+            <div className="bg-white p-8 shadow-md h-72 overflow-y-auto">
             <MusicDiscButton
               onClick={() =>
                 handleMusicDiscSelection(
@@ -298,6 +298,7 @@ export default function Jukebox() {
               imageSrc="/images/music-discs/pigstep.png"
               label="Music Disc pigstep"
             />
+            </div>
           </div>
         </div>
       )}
