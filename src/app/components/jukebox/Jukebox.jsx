@@ -6,25 +6,25 @@ export default function Jukebox() {
   const [volumeImage, setVolumeImage] = useState("/images/icons/mute.png");
   const [selectedMusicDisc, setSelectedMusicDisc] = useState(
     "/images/music-discs/13.png"
-  ); // Provide default value in case localStorage is not available
-  const [selectMp3, setSelectMp3] = useState("/music/music-discs/13.mp3"); // Provide default value
+  );
+  const [selectMp3, setSelectMp3] = useState("/music/music-discs/13.mp3");
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [audio, setAudio] = useState(null);
+  const [isHovered, setIsHovered] = useState(false);
 
   useEffect(() => {
     handlePlay();
-    updateVolumeImage(volume); // Set initial volume image
+    updateVolumeImage(volume);
   }, []);
 
   useEffect(() => {
     if (audio) {
       audio.volume = volume / 100;
     }
-    updateVolumeImage(volume); // Update volume image on volume change
+    updateVolumeImage(volume);
   }, [volume, audio]);
 
   useEffect(() => {
-    // Check if localStorage is available before using it
     const storedMusicDisc = localStorage.getItem("selectedMusicDisc");
     const storedMp3 = localStorage.getItem("selectMp3");
 
@@ -39,7 +39,7 @@ export default function Jukebox() {
   };
 
   const updateVolumeImage = (newVolume) => {
-    if (newVolume === 0) {
+    if (newVolume < 1) {
       setVolumeImage("/images/icons/mute.png");
     } else if (newVolume <= 30) {
       setVolumeImage("/images/icons/speaker-low.png");
@@ -74,31 +74,39 @@ export default function Jukebox() {
     newAudio.play();
     setAudio(newAudio);
   };
-  
+
   return (
     <>
-      <div className="flex flex-col z-10 fixed bottom-0 right-0 m-5">
+      <div
+        className="flex flex-col z-10 fixed bottom-0 right-0 m-5"
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
         <div className="flex justify-center items-center flex-row-reverse">
           <img
-            className="size-7  ml-auto transition ease-in-out hover:scale-110 cursor-pointer"
+            className="size-7 ml-auto transition ease-in-out hover:scale-110 cursor-pointer"
             src={volumeImage}
             alt="volume button"
           />
 
-          <input
-            type="range"
-            id="volume"
-            min="0"
-            max="100"
-            value={volume}
-            onChange={handleVolumeChange}
-            className="appearance-none mr-1 accent-gray-800 bg-gray-700 h-2 outline-none"
-            style={{
-              // Adjust the height of the thumb here
-              height: "8px",
-            }}
-          />
-          <span className="text-gray-600">{volume}%</span>
+          {isHovered && (
+            <>
+              <input
+                type="range"
+                id="volume"
+                min="0"
+                max="100"
+                value={volume}
+                onChange={handleVolumeChange}
+                className="appearance-none mr-1 accent-gray-800 bg-gray-700 h-2 outline-none"
+                style={{
+                  // Adjust the height of the thumb here
+                  height: "8px",
+                }}
+              />
+              <span className="text-gray-600">{volume}%</span>
+            </>
+          )}
         </div>
         <img
           className="ml-auto bottom-0 right-0 size-20 transition ease-in-out hover:scale-110 cursor-pointer"
