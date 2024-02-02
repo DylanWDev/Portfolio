@@ -3,7 +3,7 @@ import React from "react";
 
 const Moon = () => {
   return (
-    <div className="font-semibold text-white flex flex-col items-center justify-center h-svh text-center relative z-10">
+    <div className="size-16 font-semibold text-white flex flex-col items-center justify-center h-svh text-center relative z-10">
       <img id="moon" src="/images/moon.png" alt="Moon" />
     </div>
   );
