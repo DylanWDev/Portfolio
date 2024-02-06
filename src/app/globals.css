@@ -89,3 +89,18 @@ html {
 
 
 
+
+.hide {
+  opacity: 0;
+  transform: translateX(-100px); /* Optional: Add a slight vertical translation */
+  transition: opacity 1s, transform 1s;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+
