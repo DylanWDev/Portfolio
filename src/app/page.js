@@ -7,6 +7,8 @@ import Jukebox from "./components/jukebox/Jukebox.jsx";
 import Moon from "./components/Moon/Moon.jsx";
 
 export default function Home() {
+  
+
   return (
     <>
       <div className="relative">
@@ -16,8 +18,8 @@ export default function Home() {
         <div className="font-semibold text-white flex flex-col items-center justify-center h-svh text-center relative z-10">
           <Moon />
         </div>
-      </div>
 
+      </div>
       <div className="absolute top-0 w-full z-50">
         <Nav />
       </div>

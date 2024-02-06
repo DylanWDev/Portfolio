@@ -87,18 +87,17 @@ export default function Jukebox() {
     }
   };
 
-
   const handleClosedModel = () => {
     setIsModalOpen(false);
-  }
+  };
 
   const handleMute = () => {
     if (volume > 0) {
-      setVolume(0)
+      setVolume(0);
     } else {
-      setVolume(5)
+      setVolume(5);
     }
-  }
+  };
 
   return (
     <>
@@ -149,7 +148,12 @@ export default function Jukebox() {
           <div className="bg-gray-100 p-5 shadow-lg">
             <div className="flex justify-center items-center gap-5 mb-5">
               <h2 className="text-lg font-bold">Choose a Music Disc</h2>
-              <button className="transition bg-gray-600 size-7 text-xl hover:bg-gray-700" onClick={handleClosedModel}>x</button>
+              <button
+                className="transition bg-gray-600 size-7 text-xl hover:bg-gray-700"
+                onClick={handleClosedModel}
+              >
+                x
+              </button>
             </div>
             <div className="bg-white p-8 shadow-md h-60 overflow-y-auto">
               <MusicDiscButton
@@ -331,7 +335,9 @@ export default function Jukebox() {
             <div className="flex justify-center items-center mt-5">
               <button
                 className={`border-solid border-2 text-white p-1 h-8 text-center w-16 transition ${
-                  isPlaying ? "bg-red-500 hover:bg-red-600" : "bg-green-500 hover:bg-green-600"
+                  isPlaying
+                    ? "bg-red-500 hover:bg-red-600"
+                    : "bg-green-500 hover:bg-green-600"
                 }`}
                 onClick={handlePlayPause}
               >

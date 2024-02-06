@@ -1,9 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
-import a from "next/link";
 import { Popover } from "@headlessui/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import { useRouter } from "next/navigation";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const Nav = () => {
   const [currentPath, setCurrentPath] = useState("");
@@ -16,54 +15,60 @@ const Nav = () => {
 
   return (
     <Popover className="nav container text-white mx-auto flex items-center px-6 py-2 h-20">
-      <a className=" font-bold text-lg" href="/">
+      <Link to="/" className=" font-bold text-lg" smooth={true} duration={500}>
         DylanWDev
-      </a>
+      </Link>
       <div className="grow">
         <div className="hidden text-lg sm:flex items-center justify-end gap-5">
-          <a href="#about">
+          <Link
+            to="about"
+            smooth={true}
+            duration={500}
+            className={`relative w-fit block transition ease-in-out hover:text-violet-600 cursor-pointer after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center ${
+              isCurrentPage("#about") ? "text-violet-600" : ""
+            }`}
+          >
+            About
             <span
-              className={`relative w-fit block transition ease-in-out hover:text-violet-600 cursor-pointer after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center ${
-                isCurrentPage("#about") ? "text-violet-600" : ""
+              className={`absolute block after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center ${
+                isCurrentPage("#about") ? "scale-x-100" : ""
               }`}
-            >
-              About
-              <span
-                className={`absolute block after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center ${
-                  isCurrentPage("#about") ? "scale-x-100" : ""
-                }`}
-              ></span>
-            </span>
-          </a>
-          <a href="#blog">
+            ></span>
+          </Link>
+          <Link
+            to="blog"
+            smooth={true}
+            duration={500}
+            className={`relative w-fit block transition ease-in-out hover:text-violet-600 cursor-pointer after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center ${
+              isCurrentPage("#blog") ? "text-violet-600" : ""
+            }`}
+          >
+            Blog
             <span
-              className={`relative w-fit block transition ease-in-out hover:text-violet-600 cursor-pointer after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center ${
-                isCurrentPage("#blog") ? "text-violet-600" : ""
+              className={`absolute block after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center ${
+                isCurrentPage("#blog") ? "scale-x-100" : ""
               }`}
-            >
-              Blog
-              <span
-                className={`absolute block after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center ${
-                  isCurrentPage("#blog") ? "scale-x-100" : ""
-                }`}
-              ></span>
-            </span>
-          </a>
-          <a href="#work">
+            ></span>
+          </Link>
+          <Link
+            to="work"
+            smooth={true}
+            duration={500}
+            className={`relative w-fit block transition ease-in-out hover:text-violet-600 cursor-pointer after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center ${
+              isCurrentPage("#work") ? "text-violet-600" : ""
+            }`}
+          >
+            Work
             <span
-              className={`relative w-fit block transition ease-in-out hover:text-violet-600 cursor-pointer after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center ${
-                isCurrentPage("#work") ? "text-violet-600" : ""
+              className={`absolute block after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center ${
+                isCurrentPage("#work") ? "scale-x-100" : ""
               }`}
-            >
-              Work
-              <span
-                className={`absolute block after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center ${
-                  isCurrentPage("#work") ? "scale-x-100" : ""
-                }`}
-              ></span>
-            </span>
-          </a>
-          <button className="hire-me flex rounded-lg transition hover:bg-violet-600 text-white font-semibold py-2 px-4 border border-gray-400  shadow">
+            ></span>
+          </Link>
+          <button
+            onClick={() => scroll.scrollToBottom()}
+            className="hire-me flex rounded-lg transition hover:bg-violet-600 text-white font-semibold py-2 px-4 border border-gray-400  shadow"
+          >
             Hire Me
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -104,26 +109,34 @@ const Nav = () => {
             </div>
             <div className="mt-6">
               <nav className="grid gap-y-8">
-                <a
+                <Link
+                  to="about"
+                  smooth={true}
+                  duration={500}
                   className="focus:outline-none focus:ring-2 focus:ring-insert focus:ring-gray-500 px-2"
-                  href="#about"
-                  onClick={isCurrentPage}
                 >
                   About
-                </a>
-                <a
+                </Link>
+                <Link
+                  to="blog"
+                  smooth={true}
+                  duration={500}
                   className="focus:outline-none focus:ring-2 focus:ring-insert focus:ring-gray-500 px-2"
-                  href="#blog"
                 >
                   Blog
-                </a>
-                <a
+                </Link>
+                <Link
+                  to="work"
+                  smooth={true}
+                  duration={500}
                   className="focus:outline-none focus:ring-2 focus:ring-insert focus:ring-gray-500 px-2"
-                  href="/work"
                 >
                   Work
-                </a>
-                <button className="hire-me flex w-18 rounded-lg transition hover:bg-violet-600 text-white font-semibold py-2 px-4 border border-gray-400  shadow">
+                </Link>
+                <button
+                  onClick={() => scroll.scrollToBottom()}
+                  className="hire-me flex w-18 rounded-lg transition hover:bg-violet-600 text-white font-semibold py-2 px-4 border border-gray-400  shadow"
+                >
                   Hire Me
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
