@@ -25,8 +25,13 @@ export default function About() {
   }, []); // Empty dependency array ensures this effect runs only once
 
   return (
-    <div className="flex flex-col justify-center container h-screen mx-auto p-8">
-      <div style={{ textShadow: "0px 0.1em gray" }} className="underline underline-offset-8 text-white text-6xl mb-10 ">About Me!</div>
+    <div className="flex flex-col justify-center text-center container h-screen mx-auto p-8">
+      <div
+        style={{ textShadow: "0px 0.1em gray" }}
+        className="hide underline underline-offset-8 text-white text-5xl md:text-6xl lg:text-7xl mb-10 "
+      >
+        About
+      </div>
       <h1
         className="hide text-3xl md:text-5xl lg:text-5xl text-white font-bold mb-10"
         style={{ textShadow: "0px 0.1em gray" }}
@@ -48,12 +53,6 @@ export default function About() {
             the fast-paced world of web development, my focus is on continuous
             learning and growth.
           </p>
-        </div>
-        <div className="size-80 flex-shrink-0">
-          <img
-            className="object-cover w-full h-full"
-            src="/images/IMG_9082.JPG"
-          />
         </div>
       </div>
     </div>
