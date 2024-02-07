@@ -92,13 +92,15 @@ html {
 
 .hide {
   opacity: 0;
-  transform: translateX(-100px); /* Optional: Add a slight vertical translation */
-  transition: opacity 1s, transform 1s;
+  filter: blur(5px);
+  transform: translateX(-100px); 
+  transition: all 1s;
 }
 
 .show {
   opacity: 1;
-  transform: translateY(0);
+  filter: blur(0);
+  transform: translateX(0);
 }
 
 
