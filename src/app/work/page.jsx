@@ -83,37 +83,8 @@ export default function Projects() {
               buttonLink="https://github.com/DylanWDev/Vitala-Frontend"
             />
 
-            <Card
-              imageUrl="/images/weather-app.png"
-              title="Weather App"
-              description="Easy weather tracking for each zipcode"
-              buttonText="Click Me!"
-              buttonLink="https://github.com/DylanWDev/weather-app"
-            />
-
-            <Card
-              imageUrl="/images/tic-tac-toe.png"
-              title="Tic-Tac-Toe"
-              description="Simple Digital Alarm Clock"
-              buttonText="Click Me!"
-              buttonLink="https://github.com/DylanWDev/tic-tac-toe"
-            />
-
-            <Card
-              imageUrl="/images/alarm-clock.png"
-              title="Alarm Clock"
-              description="App for checking weather mhm yes"
-              buttonText="Click Me!"
-              buttonLink="https://github.com/DylanWDev/alarm-clock"
-            />
-
-            <Card
-              imageUrl="/images/mind-reader.png"
-              title="Mind Reader"
-              description="I can read your mind!"
-              buttonText="Click Me!"
-              buttonLink="https://github.com/DylanWDev/mind-reader"
-            />
+            
+            
           </div>
         </div>
       </section>
