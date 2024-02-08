@@ -14,7 +14,7 @@ const Nav = () => {
   const isCurrentPage = (href) => currentPath === href;
 
   return (
-    <Popover className="nav container text-white mx-auto flex items-center px-6 py-2 h-20">
+    <Popover className="nav container text-white mx-auto flex items-center px-6 py-2 h-20 sticky top-0 z-50">
       <Link to="/" className=" font-bold text-lg" smooth={true} duration={500}>
         DylanWDev
       </Link>
