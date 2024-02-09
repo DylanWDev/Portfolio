@@ -42,10 +42,10 @@ export default function About() {
       <div className="flex flex-col sm:flex-row gap-28">
         <div className="text-white">
           <p className="hide text-md md:text-xl lg:text-2xl">
-            My coding journey began in the summer of 2022 when I enrolled in an
-            intro to web development class. The excitement I felt during that
-            summer ignited a passion for coding that led me to join a bootcamp
-            in the fall of 2023.
+            My coding journey began in the summer of 2022 when I enrolled in the
+            Awesome Inc U Bootcamp. The excitement I felt during that summer
+            ignited a passion for coding that led me to join a bootcamp in the
+            fall of 2023.
           </p>
           <p className="hide text-md md:text-xl lg:text-2xl mt-4">
             I thrive on turning ideas into reality through code, and I'm
