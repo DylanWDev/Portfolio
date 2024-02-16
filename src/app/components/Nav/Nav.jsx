@@ -35,21 +35,7 @@ const Nav = () => {
               }`}
             ></span>
           </Link>
-          <Link
-            to="blog"
-            smooth={true}
-            duration={500}
-            className={`relative w-fit block transition ease-in-out hover:text-violet-600 cursor-pointer after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center ${
-              isCurrentPage("#blog") ? "text-violet-600" : ""
-            }`}
-          >
-            Blog
-            <span
-              className={`absolute block after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center ${
-                isCurrentPage("#blog") ? "scale-x-100" : ""
-              }`}
-            ></span>
-          </Link>
+          
           <Link
             to="work"
             smooth={true}
