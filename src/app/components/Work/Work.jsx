@@ -11,8 +11,39 @@ export default function Work() {
       >
         Work
       </div>
-      
-      <Card />
+      <div className="flex gap-5">
+        <Card
+          imageUrl="/images/project-images/vitala.png"
+          title="Vitala"
+          description="Your card description goes here."
+          buttonText="Visit Website"
+          buttonLink="https://example.com"
+        />
+
+        <Card
+          imageUrl="/images/project-images/alarm-clock.png"
+          title="Vitala"
+          description="Your card description goes here."
+          buttonText="Visit Website"
+          buttonLink="https://example.com"
+        />
+
+        <Card
+          imageUrl="/images/project-images/mind-reader.png"
+          title="Vitala"
+          description="Your card description goes here."
+          buttonText="Visit Website"
+          buttonLink="https://example.com"
+        />
+
+        <Card
+          imageUrl="/images/project-images/weather-app.png"
+          title="Vitala"
+          description="Your card description goes here."
+          buttonText="Visit Website"
+          buttonLink="https://example.com"
+        />
+      </div>
     </div>
   );
 }
