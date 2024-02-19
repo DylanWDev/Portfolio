@@ -15,7 +15,14 @@ const Nav = () => {
 
   return (
     <Popover className="nav container text-white mx-auto flex items-center px-6 py-2 h-20 sticky top-0 z-50">
-      <Link to="/" className=" font-bold text-lg" smooth={true} duration={500}>
+      <Link
+        to="landing"
+        className={`font-bold text-lg relative w-fit block transition ease-in-out hover:text-violet-600 cursor-pointer after:block after:content-[''] after:absolute after:h-[3px] after:bg-violet-600 after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center ${
+          isCurrentPage("#about") ? "text-violet-600" : ""
+        }`}
+        smooth={true}
+        duration={500}
+      >
         DylanWDev
       </Link>
       <div className="grow">
@@ -35,7 +42,7 @@ const Nav = () => {
               }`}
             ></span>
           </Link>
-          
+
           <Link
             to="work"
             smooth={true}
