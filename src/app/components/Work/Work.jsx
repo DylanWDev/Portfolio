@@ -1,8 +1,29 @@
-"use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import Card from "../Card/Card";
 
 export default function Work() {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          } else {
+            entry.target.classList.remove("show");
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    const hiddenElements = document.querySelectorAll(".hidden-card");
+    hiddenElements.forEach((el) => observer.observe(el));
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <div className="flex flex-col justify-center text-center container h-screen mx-auto p-8">
       <div
@@ -11,37 +32,33 @@ export default function Work() {
       >
         Work
       </div>
-      <div className="flex gap-5">
+      <div className="hide projects flex gap-5">
         <Card
           imageUrl="/images/project-images/vitala.png"
           title="Vitala"
           description="Your card description goes here."
-          buttonText="Visit Website"
-          buttonLink="https://example.com"
+          buttonLink="https://github.com/DylanWDev/Vitala-Frontend"
         />
 
         <Card
           imageUrl="/images/project-images/alarm-clock.png"
-          title="Vitala"
+          title="Alarm Clock"
           description="Your card description goes here."
-          buttonText="Visit Website"
-          buttonLink="https://example.com"
+          buttonLink="https://github.com/DylanWDev/alarm-clock"
         />
 
         <Card
           imageUrl="/images/project-images/mind-reader.png"
-          title="Vitala"
+          title="Mind Reader"
           description="Your card description goes here."
-          buttonText="Visit Website"
-          buttonLink="https://example.com"
+          buttonLink="https://github.com/DylanWDev/mind-reader"
         />
 
         <Card
           imageUrl="/images/project-images/weather-app.png"
-          title="Vitala"
+          title="Weather App"
           description="Your card description goes here."
-          buttonText="Visit Website"
-          buttonLink="https://example.com"
+          buttonLink="https://github.com/DylanWDev/weather-app"
         />
       </div>
     </div>
