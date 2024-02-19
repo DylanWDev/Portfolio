@@ -3,6 +3,7 @@ import React from "react";
 import Stars from "./components/Stars/Stars.jsx";
 import Nav from "./components/Nav/Nav.jsx";
 import About from "./components/About/About.jsx";
+import Work from "./components/Work/Work.jsx";
 import Jukebox from "./components/jukebox/Jukebox.jsx";
 import Moon from "./components/Moon/Moon.jsx";
 
@@ -13,7 +14,7 @@ export default function Home() {
         <Nav />
       </div>
 
-      <div className="relative" style={{ marginTop: "-4rem" }}> {/* Adjust the negative margin to match the height of your nav */}
+      <div id="landing" className="relative" style={{ marginTop: "-4rem" }}> {/* Adjust the negative margin to match the height of your nav */}
         <div className="star-bg absolute star-container">
           <Stars />
         </div>
@@ -28,9 +29,9 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="otherSection" className="bg-blue-600">
+      <div id="work" className="bg-blue-600">
         <div>
-          <About />
+          <Work />
         </div>
       </div>
 
