@@ -38,6 +38,7 @@ export default function Work() {
           title="Vitala"
           description="Your card description goes here."
           buttonLink="https://github.com/DylanWDev/Vitala-Frontend"
+          aboutText="Vitala"
         />
 
         <Card
@@ -45,6 +46,7 @@ export default function Work() {
           title="Alarm Clock"
           description="Your card description goes here."
           buttonLink="https://github.com/DylanWDev/alarm-clock"
+          aboutText="Alarm Clock"
         />
 
         <Card
@@ -52,6 +54,7 @@ export default function Work() {
           title="Mind Reader"
           description="Your card description goes here."
           buttonLink="https://github.com/DylanWDev/mind-reader"
+          aboutText="Mind Reader"
         />
 
         <Card
@@ -59,6 +62,7 @@ export default function Work() {
           title="Weather App"
           description="Your card description goes here."
           buttonLink="https://github.com/DylanWDev/weather-app"
+          aboutText="Weather App"
         />
       </div>
     </div>
