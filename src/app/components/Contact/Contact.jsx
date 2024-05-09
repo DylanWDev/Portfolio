@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import Nav from "../components/Nav/Nav";
+import Nav from "../Nav/Nav";
 import toast, { Toaster } from 'react-hot-toast';
 
 export default function Contact() {
@@ -19,7 +19,7 @@ export default function Contact() {
       )
       .then(
         (response) => {
-          console.log("SUCCESS!", response.status, response.text);
+          toast.success("SUCCESS!", response.status, response.text);
         },
         (error) => {
           console.log("FAILED...", error);
@@ -29,10 +29,6 @@ export default function Contact() {
 
   return (
     <div className="relative">
-      <div className="star-bg absolute star-container"></div>
-      <div className="absolute top-0 w-full">
-        <Nav />
-      </div>
       <div className="container mx-auto py-12">
         <form ref={form} onSubmit={sendEmail} className="max-w-md mx-auto">
           <div className="mb-4">
@@ -86,7 +82,7 @@ export default function Contact() {
           </div>
           <div className="flex items-center justify-between">
             <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+              className="bg-violet-600 hover:bg-violet-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
               type="submit"
             >
               Send
@@ -94,6 +90,10 @@ export default function Contact() {
           </div>
         </form>
       </div>
+      <Toaster
+  position="top-right"
+  reverseOrder={false}
+/>
     </div>
   );
 }
