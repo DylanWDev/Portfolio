@@ -6,6 +6,7 @@ import About from "./components/About/About.jsx";
 import Work from "./components/Work/Work.jsx";
 import Jukebox from "./components/jukebox/Jukebox.jsx";
 import Moon from "./components/Moon/Moon.jsx";
+import Contact from "./components/Contact/contact.jsx";
 
 export default function Home() {
   return (
@@ -32,6 +33,12 @@ export default function Home() {
       <div id="work" className="bg-blue-600">
         <div>
           <Work />
+        </div>
+      </div>
+
+      <div id="contact" className="bg-DarkBG h-screen flex justify-center items-center">
+        <div>
+          <Contact />
         </div>
       </div>
 
