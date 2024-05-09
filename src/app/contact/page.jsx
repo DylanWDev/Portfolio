@@ -1,26 +1,30 @@
-"use client"
-import { useState } from 'react';
+"use client";
+import React, { useRef } from "react";
+import emailjs from "@emailjs/browser";
 import Nav from "../components/Nav/Nav";
+import toast, { Toaster } from 'react-hot-toast';
 
 export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    subject: '',
-    message: ''
-  });
+  const form = useRef();
 
-  const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
-
-  const handleSubmit = (e) => {
+  const sendEmail = (e) => {
     e.preventDefault();
-    // Add code to send email using backend service
-    console.log(formData); // For testing purposes, log form data
+
+    emailjs
+      .sendForm(
+        "service_32kzfz9",
+        "template_j3we4yu",
+        form.current,
+        "0X2BJaHqEFxWxMYLP"
+      )
+      .then(
+        (response) => {
+          console.log("SUCCESS!", response.status, response.text);
+        },
+        (error) => {
+          console.log("FAILED...", error);
+        }
+      );
   };
 
   return (
@@ -30,55 +34,53 @@ export default function Contact() {
         <Nav />
       </div>
       <div className="container mx-auto py-12">
-        <form onSubmit={handleSubmit} className="max-w-md mx-auto">
+        <form ref={form} onSubmit={sendEmail} className="max-w-md mx-auto">
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">Name</label>
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="name"
+            >
+              Name
+            </label>
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="name"
               type="text"
               placeholder="Your Name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
+              name="user_name"
               required
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">Email</label>
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="email"
+            >
+              Email
+            </label>
             <input
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="email"
               type="email"
               placeholder="Your Email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
+              name="user_email"
               required
             />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="subject">Subject</label>
-            <input
-              className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-              id="subject"
-              type="text"
-              placeholder="Subject"
-              name="subject"
-              value={formData.subject}
-              onChange={handleChange}
-              required
-            />
           </div>
           <div className="mb-4">
-            <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="message">Message</label>
+            <label
+              className="block text-gray-700 text-sm font-bold mb-2"
+              htmlFor="message"
+            >
+              Message
+            </label>
             <textarea
               className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
               id="message"
               placeholder="Your Message"
               name="message"
-              value={formData.message}
-              onChange={handleChange}
               required
             ></textarea>
           </div>
