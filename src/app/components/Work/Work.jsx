@@ -32,7 +32,7 @@ export default function Work() {
       >
         Work
       </div>
-      <div className="hide projects flex gap-5">
+      <div className="hide projects grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 justify-center">
         <Card
           imageUrl="/images/project-images/vitala.png"
           title="Vitala"
