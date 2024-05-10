@@ -6,7 +6,7 @@ import About from "./components/About/About.jsx";
 import Work from "./components/Work/Work.jsx";
 import Jukebox from "./components/jukebox/Jukebox.jsx";
 import Moon from "./components/Moon/Moon.jsx";
-import Contact from "./components/Contact/contact.jsx";
+import Contact from "./components/Contact/Contact.jsx";
 
 export default function Home() {
   return (
