@@ -30,7 +30,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="work" className="bg-blue-600">
+      <div id="work" className="bg-LightishBG">
         <div>
           <Work />
         </div>
