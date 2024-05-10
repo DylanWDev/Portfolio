@@ -6,12 +6,12 @@ import About from "./components/About/About.jsx";
 import Work from "./components/Work/Work.jsx";
 import Jukebox from "./components/jukebox/Jukebox.jsx";
 import Moon from "./components/Moon/Moon.jsx";
-import Contact from "./components/Contact/contact.jsx";
+import Contact from "./components/Contact/Contact.jsx";
 
 export default function Home() {
   return (
     <>
-      <div className="absolute top-0 w-full z-50 sticky">
+      <div className="top-0 w-full z-50 sticky">
         <Nav />
       </div>
 
@@ -41,7 +41,6 @@ export default function Home() {
           <Contact />
         </div>
       </div>
-
       <Jukebox />
     </>
   );
