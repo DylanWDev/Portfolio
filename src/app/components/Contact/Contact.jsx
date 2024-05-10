@@ -1,8 +1,7 @@
 "use client";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import Nav from "../Nav/Nav";
-import toast, { Toaster } from 'react-hot-toast';
+// import toast, { Toaster } from "react-hot-toast";
 
 export default function Contact() {
   const form = useRef();
@@ -19,7 +18,7 @@ export default function Contact() {
       )
       .then(
         (response) => {
-          toast.success("SUCCESS!", response.status, response.text);
+          console.log("SUCCESS!", response.status, response.text);
         },
         (error) => {
           console.log("FAILED...", error);
@@ -63,8 +62,7 @@ export default function Contact() {
               required
             />
           </div>
-          <div className="mb-4">
-          </div>
+          <div className="mb-4"></div>
           <div className="mb-4">
             <label
               className="block text-gray-700 text-sm font-bold mb-2"
@@ -90,10 +88,7 @@ export default function Contact() {
           </div>
         </form>
       </div>
-      <Toaster
-  position="top-right"
-  reverseOrder={false}
-/>
+      {/* <Toaster position="top-right" reverseOrder={false} /> */}
     </div>
   );
 }
